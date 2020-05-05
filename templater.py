@@ -34,17 +34,20 @@ class Templater(webapp2.RequestHandler):
     ########## TEMPLATING ###########
 
     if templatePath == '/index':
-      pageTitle = 'zpm.me'      
-      pageUrl = 'http://www.zpm.me/'
+      pageTitle = 'Zach Maier @ zpm.me'
+      pageUrl = 'https://www.zpm.me/'
+      pageDescription = 'Links to zpm\'s profiles across the web'
     else:
-      pageTitle = templatePath[1:] + ' - zpm.me'
-      pageUrl = 'http://www.zpm.me' + templatePath
+      pageTitle = templatePath[1:] + ' @ zpm.me'
+      pageUrl = 'https://www.zpm.me' + templatePath
+      pageDescription = ''
 
     try:
       template = JINJA_ENVIRONMENT.get_template(templatePath + '.html')
       finalHtml = template.render({
         'pageUrl': pageUrl,
         'pageTitle': pageTitle,
+        'pageDescription': pageDescription
       })
     except jinja2.TemplateNotFound as e:
       self.redirect('/')

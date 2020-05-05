@@ -8,20 +8,23 @@
     <title>{{ pageTitle }}</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ pageTitle }}">
-    <meta name="author" content="zpm">
-    <link rel="canonical" href="{{ pageUrl }}"/>
-    <link rel="publisher" href="http://www.zpm.me/"/>
+    <meta name="description" content="{{ pageDescription }}">
+    <meta name="author" content="@zpm">
 
-    <meta property="og:title" content="{{ pageTitle }}" />
-    <meta property="og:url" content="{{ pageUrl }}" />
-    <!--meta property="og:image" content="https://graph.facebook.com/zach.maier/picture?type=large" /-->
-    <meta property="og:site_name" content="zpm.me" />
-    <meta property="og:description" content="{{ pageTitle }}" />
+    <meta property="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@zpm">
+    <meta name="twitter:creator" content="@zpm">
 
-    <meta itemprop="name" content="zpm.me">
-    <meta itemprop="description" content="{{ pageTitle }}">
-    <!--meta itemprop="image" content="https://graph.facebook.com/zach.maier/picture?type=large"-->
+    <!-- the following 3 should also be used by twitter:* for each -->
+    <meta property="og:title" content="{{ pageTitle }}">
+    <meta property="og:description" content="{{ pageDescription }}">
+    <meta property="og:image" content="https://www.zpm.me/static/img/zpm_square_full.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ pageUrl }}">
+    <meta property="og:site_name" content="zpm.me">
+
+    <meta property="fb:app_id" content="1096674617373246">
 
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
     <link href="/static/css/bootstrap-responsive.min.css" rel="stylesheet">
@@ -42,10 +45,10 @@
           <h1>zpm<span class="zpm-dim">.me</span></h1>
           <div class="zpm-social-links">
             <a class="genericon genericon-twitter" href="https://www.twitter.com/zpm" target="_blank"></a>
-            <a class="genericon genericon-linkedin" href="https://www.linkedin.com/in/zpm" target="_blank"></a>
-            <a class="genericon genericon-github" href="https://github.com/zpm" target="_blank"></a>
             <a class="genericon genericon-facebook-alt" href="https://www.facebook.com/zach.maier" target="_blank"></a>
             <a class="genericon genericon-image" href="http://www.instagram.com/zpm.gif/" target="_blank"></a>
+            <a class="genericon genericon-linkedin" href="https://www.linkedin.com/in/zpm" target="_blank"></a>
+            <a class="genericon genericon-github" href="https://github.com/zpm" target="_blank"></a>
           </div>
         </div>
 
