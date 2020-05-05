@@ -1,0 +1,28 @@
+html {
+  margin-top: 40px;
+}
+
+h1, h2 {
+  font-weight: 200 !important;
+}
+
+.zpm-dim {
+  color: #e0e0e0 !important;
+}
+
+.zpm-header-row {
+  margin-bottom: 25px;
+}
+
+.zpm-social-links a.genericon {
+  color: #e0e0e0;
+  font-size: 32px;
+  height: 32px;
+  width: 32px;
+  padding: 10px 10px 10px 0;
+}
+
+.zpm-social-links a.genericon:hover {
+  text-decoration: none;
+  color: #333;
+}

@@ -1,0 +1,18 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+libraries:
+
+- name: jinja2
+  version: 2.6
+
+handlers:
+
+- url: /static
+  secure: always
+  static_dir: static
+
+- url: /.*
+  secure: always
+  script: templater.app
