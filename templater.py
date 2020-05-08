@@ -19,7 +19,7 @@ class Templater(webapp2.RequestHandler):
     # hard redirects actually refresh the page
     hardRedirects = {
       '/r': 'https://docs.google.com/document/d/1UB7mlQreqOiqDCILi_fsd2yi9WviFDcCQDJSTojlt6I/edit',
-      '/scratch': 'https://docs.google.com/document/d/1EJMROj11Qsu0SyHQlUPCLSCgOc7v9uTKuRa5qRZFSI4/edit'
+      '/scratchpad': 'https://docs.google.com/document/d/1EJMROj11Qsu0SyHQlUPCLSCgOc7v9uTKuRa5qRZFSI4/edit'
     }
     if templatePath in hardRedirects:
       self.redirect(hardRedirects[templatePath])
