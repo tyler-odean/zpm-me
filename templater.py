@@ -32,8 +32,7 @@ class Templater(webapp2.RequestHandler):
     if templatePath in softRedirects:
       templatePath = softRedirects[templatePath]
 
-    ########## TEMPLATING ###########
-
+    # special case the homepage title and description
     if templatePath == '/index':
       pageTitle = 'Zach Maier @ zpm.me'
       pageUrl = 'https://www.zpm.me/'
@@ -43,6 +42,8 @@ class Templater(webapp2.RequestHandler):
       pageUrl = 'https://www.zpm.me' + templatePath
       pageDescription = ''
 
+    # for everything else, try to load the requested template
+    # instead of 404'ing anywhere on the site, just redirect to home on failure
     try:
       template = JINJA_ENVIRONMENT.get_template(templatePath + '.html')
       finalHtml = template.render({
